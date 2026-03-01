@@ -22,16 +22,14 @@ A coordinator agent routes each query to the PDF agent or web agent, preferring 
 
 Create a `.env` file with your keys:
 
-GROQ_API_KEY=your_key
+GROQ_API_KEY=your_key  
 GOOGLE_API_KEY=your_key # only for Gemini embeddings
 
-Install dependencies:
+Install dependencies:  
+`uv sync`
 
-uv sync
-
-Run:
-
-uv run main.py
+Run:  
+`uv run main.py`
 
 ## Sample questions
 
@@ -41,5 +39,5 @@ uv run main.py
 
 ## Notes
 
-The whole document is embedded as a single unit here.
-After the first run, comment out the `knowledge_base.insert()` part
+The whole document is embedded as a single unit here.  
+After the first run, comment out the `knowledge_base.insert()` part to avoid inserting the same document again.
