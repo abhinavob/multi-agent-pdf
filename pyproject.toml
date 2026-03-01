@@ -1,0 +1,16 @@
+[project]
+name = "proj2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "agno>=2.5.5",
+    "ddgs>=9.10.0",
+    "google-genai>=1.65.0",
+    "groq>=1.0.0",
+    "lancedb>=0.29.2",
+    "openai>=2.24.0",
+    "pypdf>=6.7.4",
+    "python-dotenv>=1.2.1",
+]
