@@ -7,6 +7,7 @@ from agno.vectordb.lancedb import LanceDb
 from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.models.groq import Groq
 from agno.knowledge.embedder.google import GeminiEmbedder
+from agno.models.google import Gemini
 from rich.prompt import Prompt
 
 from dotenv import load_dotenv
@@ -30,7 +31,7 @@ knowledge_base.insert(
 def lancedb_agent(user: str = "User"):
     pdf_agent=Agent(
         name="PDF Agent",
-        model=Groq(id="llama-3.3-70b-versatile"),
+        model=Gemini(id="gemini-2.5-flash"),
         knowledge=knowledge_base,
         search_knowledge=True,
         instructions="""
@@ -62,7 +63,6 @@ def lancedb_agent(user: str = "User"):
         Always specify the source for each part of the response. Also state whether it was obtained from the PDFs or the web.
         """,
         markdown=True,
-        debug_mode=True,
     )
 
     while True:
