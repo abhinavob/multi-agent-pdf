@@ -12,11 +12,12 @@ The coordinator agent routes each query to the PDF agent or web agent, preferrin
 
 ## Tech stack
 
+- Python
 - Agno
 - LanceDB
-- Groq (Llama-3.3-70B and Qwen3-32B)
-- DuckDuckGo search tool
-- Python + uv
+- Google Gemini
+- Groq
+- DuckDuckGo search
 
 ## Running the project
 
